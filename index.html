@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/style.css">
+    <!-- For Icon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+    <!-- For Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+
+
+
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [
+                    [
+                        '$',
+                        '$'
+                    ],
+                    [
+                        '\\(',
+                        '\\)'
+                    ]
+                ]
+            }
+        };
+    </script>
+
+    <title>Педагогика</title>
+</head>
+
+<body onload="initClock()">
+    <section id="timeSection">
+        <div class="timeMailInfo">
+            <div class="time_side">
+                <span id="dayname">Day</span>,
+                <span id="month">Month</span>
+                <span id="daynum">00</span>
+                <span id="year">Year</span>,
+                <span id="time"></span>
+            </div>
+            <div class="mail_side">
+                <span class="mail"><i class="bi bi-envelope"></i>najibullahrht@mail.ru</span>
+                <span class="phone"><i class="bi bi-telephone"></i>+7 (778) 892-17-90</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="header">
+        <div class="wrapper">
+            <div class="navbar">
+                <!----------------------- Start Logo -------------------------->
+                <div class="logo_toggle">
+                    <img src="./images/logo.svg" alt="" class="logo">
+                    <div class="toggle">
+                        <i class="bi bi-list"></i>
+                        <!-- <i class="bi bi-x-lg"></i> -->
+                    </div>
+                </div>
+                <!----------------------- End Logo ---------------------------->
+                <!----------------------- Start Menu -------------------------->
+                <div class="menu">
+                    <ul class="list-items">
+                        <li class="list-links"><a href="#">Tест</a></li>
+                        <li class="list-links"><a href="#">Оқулықтар</a></li>
+                        <li class="list-links"><a href="#">Біз жайлы</a></li>
+                        <li class="list-links login account"><a href="#">Кіру</a></li>
+                        <li class="list-links signup account"><a href="#">Тіркелу</a></li>
+                    </ul>
+                </div>
+                <!----------------------- End Menu ---------------------------->
+            </div>
+
+            <div class="content">
+                <div class="content-box">
+                    <h1 class="content-title">Педагогика</h1>
+                    <div class="content-info">
+                        <p class="content-text">Бұл сайт мұғалімдердің педагогикаға деген дайындығына көмек үшін
+                            жасалынды</p>
+                    </div>
+                    <div class="btns">
+                        <div class="start_quiz"><button class="content-btn">Тест тапсыру</button></div>
+                        <button class="content-btn">Сайтты қолдау</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="quizSection">
+        <div class="quiz-container">
+            <header>
+                <span class="question-total-number">1.</span>
+                <p class="title">Педагогика тест тапсырмалары</p>
+                <span class="time">11:00</span>
+            </header>
+            <div class="question-box">
+                <span class="question-number">1.</span>
+                <p id="question"></p>
+            </div>
+            <div class="answer-box">
+                <p id="answer1" class="answers"></p>
+                <p id="answer2" class="answers"></p>
+                <p id="answer3" class="answers"></p>
+                <p id="answer4" class="answers"></p>
+                <p id="answer5" class="answers"></p>
+                <p id="correct" class="answers"></p>
+            </div>
+            <footer>
+                <div class="btn">
+                    <button class="exit-btn">Тесттен шығу</button>
+                    <button class="next-btn">Келесі</button>
+                </div>
+            </footer>
+        </div>
+        <div class="result">
+            <div class="result-header">
+                <span class="result-title">Нәтижесі</span>
+            </div>
+            <div class="result-body">
+                <span class="result-total-ques">Барлығы:</span>
+                <!-- <span class="result-total-apply">Орындалғаны:</span> -->
+                <span class="result-total-valid-ques">Дұрыс жауаптар:</span>
+                <span class="result-total-invalid-ques">Қате жауаптар:</span>
+                <span class="result-total-percentage">Пайызы:</span>
+                <!-- <span class="result-total-percentage-apply">Жалпы тест бойынша пайызы:</span> -->
+            </div>
+            <div class="result-footer">
+                <button class="replay">Қайталау</button>
+                <button class="exit">Шығу</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Inside this JavaScript file I've inserted Questions and Options only -->
+    <script type="text/javascript" src="./js/questions.js"></script>
+    <!-- Inside this JavaScript file I've coded all Quiz Codes -->
+    <script type="text/javascript" src="js/script.js"></script>
+
+    <script type="text/javascript" src="./js/time.js"></script>
+    <script type="text/javascript" src="https://spikmi.org/Widget?Id=15982"></script>
+    <script src="./js/toggleMenu.js"></script>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</body>
+
+</html>

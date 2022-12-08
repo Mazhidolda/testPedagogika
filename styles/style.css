@@ -1,0 +1,584 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+:root {
+    --dark: #2e3440;
+    --blue: #339af0;
+    --hoverBlue: #59b2fc;
+    --white: #fff;
+    --hoverWhite: rgb(224, 224, 224);
+    --black: #000;
+    --red: #ff3300;
+    --hoverRed: #ff6d49;
+    --green: #00bb3e;
+}
+
+.wrapper {
+    width: 80%;
+    margin: 0 auto;
+    /* border: 1px solid red; */
+}
+
+.none {
+    display: none;
+}
+
+/* -----------------------  Start Time section -----------------------  */
+
+#timeSection {
+    background-color: #dfeefa;
+    color: var(--dark);
+}
+
+.timeMailInfo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 18px;
+}
+
+.time_side {
+    padding-left: 50px;
+    font-weight: 400;
+}
+
+.mail_side {
+    display: flex;
+    align-items: center;
+    background-color: var(--blue);
+    color: #fff;
+}
+
+.mail_side>span {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.mail {
+    position: relative;
+    padding: 10px 20px 10px 30px;
+    border-right: 1px solid #fff;
+}
+
+.mail::before {
+    position: absolute;
+    content: "";
+    width: 40px;
+    height: 100%;
+    top: 0;
+    left: -20px;
+    background: var(--blue);
+    transform: skew(40deg);
+}
+
+.phone {
+    padding: 10px 50px 10px 20px;
+}
+
+/* ----------------------- End Time section ----------------------- */
+
+/* ----------------------- Start Navbar section ----------------------- */
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.toggle {
+    position: absolute;
+    height: 80px;
+    top: 20px;
+    right: 10%;
+    font-size: 30px;
+    display: none;
+}
+
+.logo {
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+}
+
+.bi-list {
+    font-size: 35px;
+    color: var(--blue);
+    cursor: pointer;
+}
+
+.list-items {
+    display: flex;
+    list-style-type: none;
+    column-gap: 30px;
+}
+
+.list-links>a {
+    font-size: 25px;
+    font-weight: bold;
+    color: var(--blue);
+}
+
+.list-links>a:hover {
+    color: var(--hoverBlue);
+}
+
+.account>a {
+    font-size: 25px;
+    color: var(--white);
+    padding: 2px 10px;
+    background-color: var(--red);
+    border-radius: 4px;
+}
+
+.account>a:hover {
+    background-color: var(--hoverRed);
+    color: var(--white);
+}
+
+/* ----------------------- End Navbar section ----------------------- */
+
+/* ----------------------- Start Header section ----------------------- */
+
+#header {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: #d8dee9;
+    background-image: url("../images/bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.content {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+    margin-top: 50px;
+    /* z-index: -10; */
+}
+
+.content-box {
+    width: 500px;
+    /* border: 1px solid red; */
+}
+
+.content-title {
+    font-size: 55px;
+    color: var(--blue);
+}
+
+.content-text {
+    font-size: 25px;
+    padding: 10px 0;
+}
+
+.content-btn {
+    font-size: 25px;
+    background-color: var(--red);
+    color: var(--white);
+    border: none;
+    padding: 8px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.content-btn:hover {
+    background-color: var(--hoverRed);
+}
+
+.btns {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+/* ----------------------- End Header section ----------------------- */
+
+
+/* ----------------------- Start For footer ----------------------- */
+
+
+
+/* ----------------------- End For footer  ----------------------- */
+
+
+/* ----------------------- Start For Quiz ----------------------- */
+
+#quizSection {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header {
+    width: 100%;
+    height: 70px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--hoverBlue);
+    /* border: 1px solid red; */
+}
+
+footer {
+    width: 100%;
+}
+
+.quiz-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    border: 5px solid var(--blue);
+    background-color: #fff;
+    color: #000;
+    padding: 30px;
+    box-shadow: 0px 0px 5px rgb(242, 242, 242);
+    display: flex;
+    flex-direction: column;
+    display: none;
+}
+
+.quiz-container.active {
+    display: flex;
+}
+
+.question-total-number {
+    width: 100px;
+    text-align: center;
+    font-size: 18px;
+    background-color: var(--white);
+    color: var(--black);
+    padding: 10px 20px;
+    margin-left: 20px;
+    border-radius: 2px;
+
+}
+
+.title {
+    font-size: 30px;
+    color: var(--white);
+    font-weight: 600;
+}
+
+.time {
+    font-size: 18px;
+    width: 100px;
+    text-align: center;
+    background-color: var(--white);
+    color: var(--black);
+    padding: 10px 20px;
+    margin-right: 20px;
+    border-radius: 2px;
+}
+
+.question-box {
+    display: flex;
+}
+
+.question-number {
+    font-size: 18px;
+}
+
+.question-box {
+    border-bottom: 2px solid var(--blue);
+}
+
+#question {
+    font-size: 18px;
+    padding-bottom: 20px;
+    text-indent: 5px;
+}
+
+.answers {
+    font-size: 18px;
+    margin-top: 20px;
+    width: 100%;
+    background-color: #fff;
+    margin-bottom: 5px;
+    padding: 10px;
+    cursor: pointer;
+    border: 1px solid var(--blue);
+}
+
+.answers:hover {
+    background-color: rgb(153, 255, 149);
+}
+
+.correct_ans {
+    display: none;
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.exit-btn,
+.next-btn {
+    font-size: 18px;
+    font-weight: 500;
+    padding: 10px 20px;
+    background-color: var(--blue);
+    color: var(--white);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.exit-btn:hover,
+.next-btn:hover {
+    background-color: var(--hoverBlue);
+}
+
+#correct {
+    display: none;
+}
+
+.disable {
+    display: none;
+}
+
+.deactive {
+    pointer-events: none;
+}
+
+.correctans {
+    background-color: var(--green);
+    color: var(--white);
+}
+
+.incorrectans {
+    content: "\F396";
+    background-color: var(--red);
+    color: var(--white);
+}
+
+.answerHover {
+    background-color: var(--hoverBlue);
+}
+
+.pointersEventBtn {
+    pointer-events: none;
+}
+
+/* Result box */
+
+.res {
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+}
+
+.result {
+    position: relative;
+    width: 400px;
+    box-shadow: 0 0 10px rgb(187, 187, 187);
+    /* border: 1px solid red; */
+    display: none;
+}
+
+.result.active {
+    display: block;
+}
+
+.result-header {
+    width: 100%;
+    height: 70px;
+    font-size: 40px;
+    background-color: var(--blue);
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.result-body {
+    width: 100%;
+    font-size: 35px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    color: var(--blue);
+    background-color: var(--white);
+}
+
+.result-body>span {
+    margin-bottom: 20px;
+}
+
+.result-footer {
+    width: 100%;
+    height: 70px;
+    font-size: 40px;
+    background-color: var(--blue);
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.replay,
+.exit {
+    font-size: 25px;
+    background-color: var(--white);
+    color: var(--blue);
+    border: none;
+    padding: 7px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.replay:hover,
+.exit:hover {
+    background-color: var(--hoverWhite);
+}
+
+.replay {
+    pointer-events: none;
+}
+
+/* ----------------------- End For Quiz ----------------------- */
+
+/* ----------------------- Start media ----------------------- */
+
+@media (max-width: 950px) {
+    #timeSection {
+        display: none;
+    }
+
+    .wrapper {
+        width: 100%;
+    }
+
+    .toggle {
+        display: block;
+    }
+
+    .logo {
+        margin-left: 10%;
+    }
+
+    .logo_toggle {
+        width: 100%;
+    }
+
+    .logo_toggle.active {
+        background-color: var(--blue);
+    }
+
+    .bi-list.active {
+        color: var(--white);
+    }
+
+    .list-items {
+        width: 100%;
+        height: 100%;
+        display: none;
+        position: fixed;
+        top: 10%;
+        left: 0;
+        transform: translateX(-50%);
+        text-align: center;
+        background-color: var(--blue);
+        z-index: 100000;
+    }
+
+    .list-items.active {
+        left: 50%;
+        display: block;
+    }
+
+    .list-links:hover {
+        background-color: var(--hoverBlue);
+    }
+
+    .list-links {
+        width: 100%;
+        padding: 15px 0;
+    }
+
+    .list-links>a {
+        color: var(--white);
+    }
+
+    .list-links>a:hover {
+        color: var(--white);
+    }
+
+    .login {
+        margin-top: 100px;
+    }
+
+    .signup {
+        margin-bottom: 50px;
+    }
+}
+
+@media (max-width: 900px) {
+    .content-text {
+        color: var(--blue);
+    }
+
+    .content {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 800px) {
+    .title {
+        font-size: 23px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 460px) {
+    .title {
+        font-size: 15px;
+        text-align: center;
+    }
+
+    .question-total-number,
+    .time {
+        font-size: 15px;
+    }
+
+    .btn {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+    }
+}
+
+@media (max-width: 450px) {
+    .btns {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+/* ----------------------- End Media ----------------------- */
