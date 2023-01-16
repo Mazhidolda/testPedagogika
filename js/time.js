@@ -1,8 +1,10 @@
 let time = document.getElementById("time");
+let copyrigth_year = document.getElementById("copyrigth_year");
 
         setInterval(() => {
             let d = new Date();
             time.innerHTML = d.toLocaleTimeString();
+            
         }, 1000)
 
 
@@ -28,6 +30,8 @@ let time = document.getElementById("time");
                 for (var n = this.toString(); n.length < digits; n = 0 + n);
                 return n;
             }
+
+            copyrigth_year.innerHTML = yr;
 
             var months = ["Қаңтар", "Ақпан", "Наурыз", "Сәуір", "Мамыр", "Маусым", "Шілде", "Тамыз", "Қыркүйек", "Қазан", "Қараша", "Желтоқсан"];
             var week = ["Жексенбі", "Дүйсенбі", "Сейсенбі", "Сәрсенбі", "Бейсенбі", "Жұма", "Сенбі"];

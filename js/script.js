@@ -26,7 +26,12 @@ const resultTotalValidQues = document.querySelector(".result-total-valid-ques");
 const resultTotalInvalidQues = document.querySelector(".result-total-invalid-ques");
 const resultTotalPercentage = document.querySelector(".result-total-percentage");
 const resultTotalPercentageApply = document.querySelector(".result-total-percentage-apply");
-const replay = document.querySelector(".replay"); 3
+
+const news = document.getElementById('news');
+const content = document.querySelector('.content');
+const footerSite = document.querySelector('#footerSite');
+
+const replay = document.querySelector(".replay"); 
 const exit = document.querySelector(".exit");
 
 const mark_wrong = '<i class="bi bi-file-excel"></i>';
@@ -101,6 +106,10 @@ startBtn.addEventListener('click', function () {
     nextBtn.classList.add("pointersEventBtn");
 
     setInterval(updateCountDown, 1000);
+
+    news.classList.add("disable")
+    content.classList.add("disable")
+    footerSite.classList.add("disable")
 })
 
 nextBtn.addEventListener('click', function () {
@@ -280,3 +289,5 @@ exit.addEventListener('click', function () {
 
 //     setInterval(updateCountDown, 1000)
 // })
+
+
